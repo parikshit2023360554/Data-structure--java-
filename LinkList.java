@@ -1,5 +1,5 @@
 class LinkList{
-    Node head; // Add head reference
+    Node head;
     class Node{
         String data; 
         Node next; 
@@ -33,6 +33,7 @@ class LinkList{
         newNode.next = head ; 
         head = newNode;
     }
+
 
 
     public static void main(String[] args){
