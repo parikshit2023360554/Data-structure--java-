@@ -21,8 +21,11 @@ class LinkList{
             System.out.print(currNode.data + "->");
             currNode = currNode.next;
         }
+        System.out.println("null");
 
     }
+
+    
 
     public void AddFirst(String data){
         Node newNode = new Node(data);
@@ -34,6 +37,39 @@ class LinkList{
         head = newNode;
     }
 
+    public void DeleteFirst(){
+        if(head == null){
+            System.out.println("the list is empty");
+        }
+        head.next = head ; 
+
+    }
+
+    
+
+    public void AddLast(String data){
+        Node newnode =new Node(data);
+        if(head==null){
+            head = newnode;
+            return;
+        }
+        Node currentNode = head;
+        while(currentNode.next != null){
+            currentNode = currentNode.next;
+        }
+        currentNode.next = newnode;
+    }
+
+    public void DeleteLast(){
+        Node currentNode = head ; 
+        while(currentNode!=null){
+            currentNode = currentNode.next;
+
+        }
+        currentNode.next = null ;
+        
+    }
+
 
 
     public static void main(String[] args){
@@ -41,5 +77,8 @@ class LinkList{
         list.AddFirst("a");
         list.AddFirst("b");
         list.PrintList();
+
+
+
     }
 }
