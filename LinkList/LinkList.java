@@ -61,13 +61,15 @@ class LinkList{
     }
 
     public void DeleteLast(){
-        Node currentNode = head ; 
-        while(currentNode!=null){
-            currentNode = currentNode.next;
-
+        if(head == null || head.next == null) {
+            head = null;
+            return;
         }
-        currentNode.next = null ;
-        
+        Node currentNode = head;
+        while(currentNode.next.next != null) {
+            currentNode = currentNode.next;
+        }
+        currentNode.next = null;
     }
 
 
