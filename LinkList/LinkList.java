@@ -1,3 +1,4 @@
+package LinkList;
 class LinkList{
     Node head;
     class Node{
@@ -65,6 +66,7 @@ class LinkList{
             head = null;
             return;
         }
+        
         Node currentNode = head;
         while(currentNode.next.next != null) {
             currentNode = currentNode.next;
