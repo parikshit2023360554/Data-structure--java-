@@ -1,6 +1,6 @@
 package LinkList;
 
-import java.util.Set;
+
 
 public class DoublyLinkList {
     private static  Node head;
@@ -147,7 +147,5 @@ public class DoublyLinkList {
         DisplayList(head);
         DeleteLast();
         DisplayList(head);
-
-
     }
 }
