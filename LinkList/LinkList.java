@@ -75,6 +75,11 @@ class LinkList{
     }
 
 
+    public void Addindex(String data , int pos){
+        
+    }
+
+
 
     public static void main(String[] args){
         LinkList list = new LinkList();
