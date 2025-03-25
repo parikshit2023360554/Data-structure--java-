@@ -76,7 +76,35 @@ class LinkList{
 
 
     public void Addindex(String data , int pos){
+        Node newnode = new Node(data);
+        if(head==null){
+            head = newnode;
+            return;
+
+        }
+
+        if(pos==0){
+            newnode.next= head;
+            head = newnode;
+            return;
+        }
+       
+        Node temp = head ; 
+        int index =0 ;
+        while(temp!=null && index<pos-1){
+            temp = temp.next;
+            index++;
+        }
+
+        if(temp==null){
+            temp = head;
+            while(temp.next!=null){
+                temp = temp.next;
+            }
+        }
         
+        newnode.next = temp.next;
+        temp.next = newnode;
     }
 
 
@@ -85,6 +113,10 @@ class LinkList{
         LinkList list = new LinkList();
         list.AddFirst("a");
         list.AddFirst("b");
+        list.PrintList();
+        list.Addindex("d", 2);
+        list.PrintList();
+        list.Addindex("e", 2);
         list.PrintList();
 
 
