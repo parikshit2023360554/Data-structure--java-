@@ -42,7 +42,7 @@ public class circularLinklist {
     }
 
     public static void main(String args[]){
-        
+        hello ;
     }
     
 }
